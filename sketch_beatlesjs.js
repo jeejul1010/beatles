@@ -9,7 +9,7 @@ function preload(){
 function setup() {
   createCanvas(img.width, img.height);
   ellipseMode(CORNER);
-  resolution=40;
+  resolution=60;
   xInc = img.width/resolution;
   yInc = img.height/resolution;
 }
@@ -27,11 +27,9 @@ function draw() {
   img.loadPixels();
   for (var y=0; y<resolution; y++) {
     for (var x=0; x<resolution; x++) {
-      var ix = x * xInc;
-      var iy = y * yInc;
-      //fill(fget(img, ix+xInc/2, iy+yInc/2));
-      fill(fget(img, ix, iy));
-      //fill(img.pixels[]);
+      var ix = Math.floor(x * xInc);
+      var iy = Math.floor(y * yInc);
+      fill(fget(img, Math.floor(ix+xInc/2), Math.floor(iy+yInc/2)));
       ellipse(ix, iy, xInc, yInc);
     }
   }
