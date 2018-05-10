@@ -48,7 +48,7 @@ function draw() {
       }
       for (var x = mx-winsize/2; x < mx+winsize/2; x++) {
         if (0 <= x && x < width) {
-          index = (y*width+x) * 4;
+          var index = (y*width+x) * 4;
           pixels[index] = img.pixels[index];//img.get(x, y);
           pixels[index+1] = img.pixels[index+1];
           pixels[index+2] = img.pixels[index+2];
