@@ -1,7 +1,7 @@
 var img;
 var xInc, yInc;
 var resolution;
-var mx, my;
+
 function preload(){
   img = loadImage("assets/beatles.jpg");
 }
@@ -9,12 +9,9 @@ function preload(){
 function setup() {
   createCanvas(img.width, img.height);
   ellipseMode(CORNER);
-  resolution=60;
+  resolution=40;
   xInc = img.width/resolution;
   yInc = img.height/resolution;
-  mx = -100;
-  my = -100;
-  //img.loadPixels();
 }
 
 function fget(img, x, y) {
