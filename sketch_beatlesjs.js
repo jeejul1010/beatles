@@ -36,7 +36,7 @@ function draw() {
     }
   }
   
-  if (mouseIsPressed) {
+  //if (mouseIsPressed) {
 
     loadPixels();
     var mx = mouseX;
@@ -58,5 +58,5 @@ function draw() {
     }
     updatePixels();
    
-  }
+  //}
 }
